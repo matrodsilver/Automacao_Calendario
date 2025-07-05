@@ -1,2 +1,2 @@
-# Automa-o_Calend-rio
+# Automação_Calendário
 Repositório da aplicação de automação do calendário
