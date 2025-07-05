@@ -1,0 +1,36 @@
+{
+    "paradas_programadas": {
+        "15/07": {
+            "instância": "Chiller",
+            "notas": "Parada de um Chiller para manutenção, estimativa de 1 horas"
+        },
+        "05/08": {
+            "instância": "MCAG-B1",
+            "notas": "Parada do MCAG-B1 para manutenção, estimativa de 3 horas"
+        },
+        "09/09": {
+            "instância": "MCAG-B2",
+            "notas": "Parada do MCAG-B2 para manutenção, estimativa de 2 horas"
+        },
+        "11/09": {
+            "instância": "Água",
+            "notas": "Parada do sistema hidráulico para manutenção"
+        },
+        "27/09": {
+            "instância": "Parada",
+            "notas": "Parada geral total máxima nada vai funcionar tudo vai parar.com.br"
+        },
+        "01/10": {
+            "instância": "Geradores",
+            "notas": "Parada dos geradores para manutenção, tempo indefinido"
+        },
+        "20/10": {
+            "instância": "Disjuntores",
+            "notas": "Parada dos disjuntores para manutenção, Júlio vai fazer essa boa"
+        },
+        "03/11": {
+            "instância": "testes",
+            "notas": "Parada geral total máxima nada vai funcionar tudo vai parar.com.br"
+        }
+    }
+}
