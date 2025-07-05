@@ -16,7 +16,7 @@ dict_calendario = cf.json2dict(caminho_json)
 def historico():
     dias_mes = [n for n in range(1, 31)] #! pegar dias do mês (i.e. datetime)
 
-    paradas = [n for n in range(1, 6)] #! pegar paradas (i.e. eventos)
+    paradas = [n for n in range(1, 6)] #! pegar paradas (i.e. puxar das chaves da base de dados)
 
     # for chave in dict_calendario:
     #     print(chave)
