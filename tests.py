@@ -13,11 +13,11 @@
 # entradas = {
 #     "paradas_programadas": {
 #         "04/08": {
-#             "instância": "Chiller",
+#             "instância": "Ar-condicionado",
 #             "notas": "Parada de um Chiller para manutenção, estimativa de 1 horas"},
 #         "05/08": {
-#             "instância": "MCAG-B1",
-#             "notas": "Parada do MCAG-B1 para manutenção, estimativa de 3 horas"
+#             "instância": "máquina-1",
+#             "notas": "Parada máquina-1 para manutenção, estimativa de 3 horas"
 #         },
 #         "key_indent1": {
 #             "key_indent2": {
@@ -40,7 +40,7 @@
 # entrada = {
 #     "paradas_programadas": {
 #         "04/08": {
-#             "instância": "Chiller",
+#             "instância": "Ar-condicionado",
 #             "notas": "Parada de um Chiller para manutenção, estimativa de 1 horas"},
 #         "05/08": {
 #             "instância": "MCAG-B1",
