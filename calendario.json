@@ -1,36 +1,57 @@
 {
-    "paradas_programadas": {
-        "15/07": {
+    "paradas_fixas": {
+        "15/07/2025": {
             "instância": "Ar-condicionado",
-            "notas": "Parada de um Chiller para manutenção, estimativa de 1 horas"
+            "notas": "Parada de um ar-condicionado para manutenção, estimativa de 1 horas"
         },
-        "05/08": {
+        "05/08/2025": {
             "instância": "máquina-1",
             "notas": "Parada máquina-1 para manutenção, estimativa de 3 horas"
         },
-        "09/09": {
+        "09/08/2025": {
             "instância": "máquina-2",
-            "notas": "Parada do máquina-2 para manutenção, estimativa de 2 horas"
+            "notas": "Parada máquina-2 para manutenção, estimativa de 2 horas"
         },
-        "11/09": {
+        "11/09/2025": {
             "instância": "Água",
             "notas": "Parada do sistema hidráulico para manutenção"
         },
-        "27/09": {
+        "27/09/2025": {
             "instância": "Parada",
             "notas": "Parada geral total máxima nada vai funcionar tudo vai parar.com.br"
         },
-        "01/10": {
+        "01/10/2025": {
             "instância": "Geradores",
             "notas": "Parada dos geradores para manutenção, tempo indefinido"
         },
-        "20/10": {
-            "instância": "Painéis",
-            "notas": "Parada dos painéis para manutenção, Júlio vai fazer essa boa"
+        "20/10/2025": {
+            "instância": "Disjuntores",
+            "notas": "Parada dos disjuntores para manutenção, Júlio vai fazer essa boa"
         },
-        "03/11": {
+        "ER/R0/0000": {
+            "instância": "testeErro",
+            "notas": {"erro" : "erro aki"}
+        },
+        "08/11/2025": {
             "instância": "testes",
             "notas": "Parada geral total máxima nada vai funcionar tudo vai parar.com.br"
         }
-    }
+    },
+    "paradas_variáveis": {
+        "00/00/0000": {
+            "instância": "testInstancia",
+            "notas": "testNotas"
+        },
+        "11/11/1111": {
+            "instância": "testInstancia",
+            "notas": "testNotas"
+        },
+        "22/22/2222": {
+            "instância": "testInstancia",
+            "notas": "testNotas"
+        }
+    },
+    "a": "val a",
+    "b": "val b",
+    "0": 0
 }
