@@ -1,8 +1,7 @@
-
 import json
 
 
-def json2dict(path: str) -> dict:
+def JSON2Dict(path: str) -> dict:
     #* Transforma um arquivo JSON em um dicionário Python
 
     with open(path, "r", encoding='utf-8') as calendario_JSON:
@@ -11,81 +10,102 @@ def json2dict(path: str) -> dict:
     return dicionario
 
 
-def dict2json(path: str, dict_cal: dict):
+def Dict2JSON(path: str, dict_cal: dict):
     #* Salva um dicionário Python para um arquivo JSON
 
     with open(path, "w", encoding='utf-8') as calendario_JSON:
         if len(dict_cal) > 0:
-            # . dict_cal.update(dict_cal)
             print(dict_cal)
             calendario_JSON.truncate()
             json.dump(dict_cal, calendario_JSON, ensure_ascii=False)
 
 
-def atualizarRecursivo(dict_cal: dict, new_entry: dict, indent: int = 0, debug: bool = True):
+def PrintarRecursivo(dict_cal: dict, indent: int = 0):
     #* Recursivamente verifica itens
 
     lvl = "|----"*indent
 
     for i in dict_cal:
         try:
-            if type(dict_cal[i]) == dict:
-                
-                if debug:  #? debug
-                    print(("\n" if indent == 0 else "") + lvl + i) #? END debug
+            if isinstance(dict_cal[i], dict):
+                print(lvl + i)
 
-                dict_cal = atualizarRecursivo(dict_cal[i], indent=indent+1, debug=debug)
+                PrintarRecursivo(dict_cal[i], indent=indent+1)
 
             else:
-                
-                if debug:  #? debug
-                    print(lvl + f"{i} => {dict_cal[i]}") #? END debug
-
+                print(lvl + f"{i} => {dict_cal[i]}")
         except:
-            print("exception")
+            print("except on:", i)
 
 
-def atualizarRecursivoV2(new_entry: dict, dict_cal: dict, indent: int = 0, debug: bool = True):
-    # * Recursivamente verifica e atualiza itens
+def AtualizarRecursivo(new_entry: dict, dict_cal: dict, indent: int = 0, debug: bool = True) -> dict:
+    #* Recursivamente verifica e atualiza itens
 
-    lvl = "|----"*indent
+    if debug:
+        print('__new_entry__')
+        PrintarRecursivo(new_entry)
+        print('\n__base_dict__')
+        PrintarRecursivo(dict_cal)
 
     for i in new_entry:
-
-        if debug:  #? debug
-            print(("\n" if indent == 0 else "") + lvl + i)  #? END debug
-
         if i not in dict_cal:
             dict_cal[i] = new_entry[i]
 
         else:
             if new_entry[i] != dict_cal[i]:
-                if type(new_entry[i]) == dict:
-                    atualizarRecursivo(new_entry[i], dict_cal[i], indent=indent+1, debug=debug)
+                if isinstance(new_entry[i], dict):
+                    AtualizarRecursivo(new_entry[i], dict_cal[i], indent=indent+1, debug=debug)
 
-                else:
-                    if debug:  #? debug
-                        print(lvl + f"{i} => {dict_cal[i]}")  #? END debug
+    if debug:
+        print('\n\n__Final__')
+        PrintarRecursivo(dict_cal)
+    
+    return dict_cal
 
 
-if __name__ == "__main__":  #? debug test
-    a = {
-        "key_indent1": {
-            "key_indent2": {
-                "key_indent3": "value_indent3",
-                "key_indent3-2": "value_indent3-2",
-                "key_indent3-3": {
-                    "key_indent4": "value_indent4"
-                }}}}
-    b = {
-        "1": {
-            "2": {
-                "3": "4",
-                "5": "6",
-                "7": {
-                    "8": "9"
-                }}}}
+def GetDatas(dict_cal : dict, debug : bool = True) -> tuple[list[int], tuple[list, list]]:
+    #* Retornar datas cadastradas
 
-    print(1, "\n", a, "\n", b, "\n")
-    atualizarRecursivoV2(b, a)
-    print(2, "\n", a, "\n", b, "\n")
+    datas = []
+    erros = ([], [])
+
+    for i in dict_cal:
+        if isinstance(dict_cal[i], dict):
+            for dia in dict_cal[i]:
+                try:
+                    if isinstance(int(dia[:2]), int) and dia[2] == '/'    \
+                    and isinstance(int(dia[3:5]), int) and dia[5] == '/'  \
+                    and isinstance(int(dia[6:]), int):
+                        datas.append(dia)
+
+                        if debug:
+                            print(dia)
+                    
+                except:
+                    erros[1].append(dia) #? salva erros em indentação no nível de datas
+
+                    if debug:                        
+                        print(f'\nErro em: {i} -> {dia}\n')
+
+                        #. if isinstance(dict_cal[i], dict):
+                        #.     PrintarRecursivo(dict_cal[i][dia])
+        
+        else:
+            erros[0].append(i) #? salva erros em indentação no nível de chaves-primárias
+            
+            if debug:
+                print(f'\n{i} => não é Dicionário ({i} => {dict_cal[i]} : {type(dict_cal[i])})')
+    
+    listas = (datas, erros)
+
+    if debug:
+        print("\n__Erros__")
+        i = 0
+
+        for indent in listas[1]:
+            for key in indent:
+                print(f"{"CHAVE:" if i == 0 else "DATA:"}", key)
+
+            i+=1
+
+    return listas
