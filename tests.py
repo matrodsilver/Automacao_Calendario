@@ -164,3 +164,22 @@ import calendario_funcs as cf
 dict_calendario = cf.JSON2Dict("./AutoCalendario/calendario.json")
 
 retorno = cf.GetDatas(dict_calendario)
+
+
+# # test time
+import time
+
+
+tempo = time.localtime()
+
+import calendar
+
+# Example: Get number of days in July 2025
+year = 2025
+month = 7
+
+days_in_month = calendar.monthrange(year, month)[1]
+days_in_year = 366 if calendar.isleap(year) else 365
+
+
+print(f"Number of days in {calendar.month_name[month]} {year} ({days_in_year} days): {days_in_month}")
