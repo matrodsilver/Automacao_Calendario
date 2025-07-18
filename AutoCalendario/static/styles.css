@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.month-selector {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.month-selector label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+select {
+    border-radius: 3px;
+    border: 1px solid #7FCCBB;
+}
+
+
+.options {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #333;
+    transition: color 0.05s ease;
+}
+
+.days li span{
+    cursor: pointer;
+}
+
+.days li:hover {
+    color: #00AAAA;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #007777;
+    color: white;
+    transition: color 0.1s ease;
+}
+
+.days li .active span{
+    padding: 5px;
+    background: #007777;
+    color: white;
+    transition: color 0.1s ease;
+    cursor: pointer;
+}
+
+.days li .active:hover {
+    color: #000;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+
+    .weekdays li,
+    .days li {
+        width: 13.1%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .weekdays li,
+    .days li {
+        width: 12.5%;
+    }
+
+    .days li .active {
+        padding: 2px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+
+    .weekdays li,
+    .days li {
+        width: 12.2%;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.calcular {
+    padding: 4px 4px !important;
+    background-color: #C0FFEE;
+    border-radius: 4px;
+    border-color: #1abc9c;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    transition: border-color 0.1s ease;
+}
+
+.calcular:hover {
+    background-color: #B9EFEF;
+    border-color: #007777;
+}
+
+.verificar {
+    background-color: #DDFFEE;
+    border-radius: 2px;
+    border-color: #77CCBB;
+    cursor: pointer;
+    transition: background-color 0.05s ease;
+    transition: border-color 0.05s ease;
+}
+
+.verificar:hover {
+    background-color: #CCFFEE;
+    border-color: #1ABC9C;
+}
+
+
+.button-options {
+    display: flex;
+    gap: 10px; /* spacing between forms */
+}
+
+.close {
+    font-size: large;
+    cursor: pointer;
+}
