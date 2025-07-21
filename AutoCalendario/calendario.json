@@ -1,83 +1,79 @@
 {
-    "paradas": {
-        "16/07/2025": {
-            "instância": "Ar-condicionado",
-            "notas": "Parada de um ar-condicionado para manutenção, estimativa de 1 horas"
-        },
-        "05/08/2025": {
-            "instância": "máquina-1",
-            "notas": "Parada máquina-1 para manutenção, estimativa de 3 horas"
-        },
-        "09/08/2025": {
-            "instância": "máquina-2",
-            "notas": "Parada máquina-2 para manutenção, estimativa de 2 horas"
-        },
-        "11/09/2025": {
-            "instância": "Água",
-            "notas": "Parada do sistema hidráulico para manutenção"
-        },
-        "27/09/2025": {
-            "instância": "Default",
-            "notas": "Default"
-        },
-        "01/10/2025": {
-            "instância": "Geradores",
-            "notas": "Parada dos geradores para manutenção, tempo indefinido"
-        },
-        "20/10/2025": {
-            "instância": "Disjuntores",
-            "notas": "Parada dos disjuntores para manutenção, Júlio vai fazer essa boa"
-        },
-        "00/00/0000": {
-            "instância": "testeErro",
-            "notas": {
-                "erro": "erro aki"
-            }
-        },
-        "00/00/0002": {
-            "instância": "testeErro2",
-            "notas": {
-                "erro2": "erro 2 aki"
-            }
-        },
-        "08/11/2025": {
-            "instância": "testes",
-            "notas": "Parada geral total máxima nada vai funcionar tudo vai parar.com.br"
-        },
-        "25/09/2025": {
-            "instância": "Default",
-            "notas": "Default"
-        },
-        "21/04/2025": {
-            "instância": "Default",
-            "notas": "Default"
+    "16/07/2025": {
+        "instância": "laranja",
+        "notas": "Parada laranja para manutenção, estimativa de 1 horas"
+    },
+    "05/08/2025": {
+        "instância": "verde",
+        "notas": "Parada verde para manutenção, estimativa de 3 horas"
+    },
+    "09/08/2025": {
+        "instância": "azul",
+        "notas": "Parada azul para manutenção, estimativa de 2 horas"
+    },
+    "11/09/2025": {
+        "instância": "marrom",
+        "notas": "Parada marrom para manutenção"
+    },
+    "27/09/2025": {
+        "instância": "Default",
+        "notas": "Default"
+    },
+    "01/10/2025": {
+        "instância": "roxo",
+        "notas": "Parada roxa para manutenção, tempo indefinido"
+    },
+    "20/10/2025": {
+        "instância": "Cinza",
+        "notas": "Parada cinza para manutenção, Júlio vai fazer essa boa"
+    },
+    "ER/R0/0000": {
+        "instância": "testeErro",
+        "notas": {
+            "erro": "erro aki"
         }
     },
-    "livres_de_paradas": {
-        "00/00/0000": {
-            "instância": "testInstancia",
-            "notas": "testNotas"
-        },
-        "11/11/1111": {
-            "instância": "testInstancia",
-            "notas": "testNotas"
-        },
-        "22/22/2222": {
-            "instância": "testInstancia",
-            "notas": "testNotas"
-        },
-        "24/12/2025": {
-            "instância": "Véspera de Natal",
-            "notas": "Dia sem parada"
-        },
-        "25/12/2025": {
-            "instância": "Natal",
-            "notas": "Dia sem parada"
-        },
-        "31/12/2025": {
-            "instância": "Ano Novo",
-            "notas": "Dia sem parada"
+    "ER/R0/0002": {
+        "instância": "testeErro2",
+        "notas": {
+            "erro2": "erro 2 aki"
         }
+    },
+    "08/11/2025": {
+        "instância": "testes",
+        "notas": "Parada geral total máxima nada vai funcionar tudo vai parar.com.br"
+    },
+    "25/09/2025": {
+        "instância": "Default",
+        "notas": "Default"
+    },
+    "21/04/2025": {
+        "instância": "Default",
+        "notas": "Default"
+    },
+    "00/00/0000": {
+        "instância": "testInstancia",
+        "notas": "testNotas"
+    },
+    "11/11/1111": {
+        "instância": "testInstancia",
+        "notas": "testNotas"
+    },
+    "22/22/2222": {
+        "instância": "testInstancia",
+        "notas": "testNotas"
+    },
+    "24/12/2025": {
+        "instância": "amarelo",
+        "notas": "Véspera de natal"
+    },
+    "25/12/2025": {
+        "instância": "amarelo",
+        "notas": "Natal"
+    },
+    "31/12/2025": {
+        "instância": "amarelo",
+        "notas": "Ano novo"
     },
     "a": "val a",
     "b": "val b",
