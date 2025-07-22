@@ -9,7 +9,7 @@ app = Flask(__name__)
 debug = False
 
 #' Carregar arquivo JSON para manipulação de dicionário
-caminho_json = r".\calendario.json"
+caminho_json = r"calendario.json"
 dict_calendario = cf.JSON2Dict(caminho_json, debug=debug)
 
 #' Vars. Mêses
