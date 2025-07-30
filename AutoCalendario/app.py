@@ -16,7 +16,7 @@ dict_calendario = cf.JSON2Dict(caminho_json, debug=debug)
 nome_meses = [
     "Index 0", 'Janeiro', "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
 cores = {
-    "laranja" : "#A50", "verde" : "#0A0", "azul" : "#00A", "marrom" : "#AA0", "roxo" : "#A0A", "amarelo" : "#0AA"}
+    "laranja" : "#C70", "verde" : "#0A0", "azul" : "#00A", "marrom" : "#954", "roxo" : "#A0A", "amarelo" : "#CC0"}
 atualidade = datetime.datetime.now()
 
 #' List erros
